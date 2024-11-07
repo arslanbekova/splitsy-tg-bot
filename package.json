@@ -1,10 +1,12 @@
 {
   "name": "split-bot-tg",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bot.js"
+    "start": "node src/bot.js",
+    "dev": "nodemon -w src src/bot.js",
+    "lint": "eslint src",
+    "lint fix": "eslint src --fix"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +16,16 @@
     "dotenv": "^16.4.5",
     "node-telegram-bot-api": "0.66.0",
     "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0"
   }
 }
